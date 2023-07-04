@@ -1,12 +1,54 @@
 
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-sans-v35-cyrillic_latin-regular.woff2') format('woff2'), url('../fonts/open-sans-v35-cyrillic_latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/open-sans-v35-cyrillic_latin-700.woff2') format('woff2'), url('../fonts/open-sans-v35-cyrillic_latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/pt-sans-v17-cyrillic_latin-700.woff2') format('woff2'), url('../fonts/pt-sans-v17-cyrillic_latin-700.woff') format('woff');
+}
+
+
 .page {
   height: 100%;
   box-sizing: border-box;
 }
 
+.page__body {
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
 .navigation__list {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .navigation__item {
@@ -14,13 +56,18 @@
 }
 
 .navigation__link {
-  /*font-family: Open Sans;*/
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
   text-align: left;
   color: #000000;
   text-decoration: none;
+}
+
+
+.navigation__item:not(first-child){
+  border-left: 1px solid rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -47,6 +94,43 @@
   background: url("../img/cart.svg") no-repeat center;
 }
 
+
+.lovely-toys__title {
+  margin: 0 auto;
+  width: 700px;
+  text-align: center;
+}
+
+.title {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 53px;
+  line-height: 57px;
+
+}
+
+.button {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #444444;
+  border: 2px solid #444444;
+  background: #ffffff;
+}
+
+.button:hover {
+  color: #ffffff;
+  background: #444444;
+  cursor: pointer;
+}
+
+.button:active {
+  color: rgba(255,255,255,0.3);
+}
 
 
 @media (min-width: 768px) and (max-width: 1279px) {

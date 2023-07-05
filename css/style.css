@@ -1,4 +1,3 @@
-
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Open Sans';
@@ -39,7 +38,7 @@
 
 .header {
   width: 100%;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .navigation__list {
@@ -66,15 +65,15 @@
 }
 
 
-.navigation__item:not(first-child){
-  border-left: 1px solid rgba(0,0,0,0.1);
+.navigation__item:not(first-child) {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .logo {
   display: block;
   width: 149px;
   height: 72px;
-  background: url("../img/main-logo-desktop.svg") no-repeat center ;
+  background: url("../img/main-logo-desktop.svg") no-repeat center;
 }
 
 .search::before {
@@ -94,12 +93,102 @@
   background: url("../img/cart.svg") no-repeat center;
 }
 
+.lovely-toys {
+
+  height: 746px;
+}
+
+.lovely-toys-inner{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+}
 
 .lovely-toys__title {
   margin: 0 auto;
   width: 700px;
   text-align: center;
 }
+
+.extended-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.extended-block__item {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.things-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.things-list__item {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.things-list__item:nth-child(1) {
+  background: #63D1BB;
+}
+
+.things-list__item:nth-child(1)::after {
+  content: "";
+  display: inline-block;
+  width: 41px;
+  height: 62px;
+  background: url("../img/interior.svg") no-repeat center;
+}
+
+.things-list__item:nth-child(2) {
+  background: #56C3B2;
+}
+
+.things-list__item:nth-child(2)::after {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 61px;
+  background: url("../img/toy.svg") no-repeat center;
+}
+
+.lovely-toys::after {
+  content: "";
+  position: relative;
+  top: -20px;
+  display: block;
+  width: auto;
+  height: 34px;
+  background: url("../img/wave.svg") no-repeat center;
+}
+
+.lovely-toys__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .title {
   font-family: "Open Sans", "Arial", sans-serif;
@@ -129,7 +218,7 @@
 }
 
 .button:active {
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 

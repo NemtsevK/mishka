@@ -5,25 +5,28 @@
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
   <title>Милые штуки ручной работы для дома</title>
   <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
   <header class="header">
     <nav class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="catalog.html">Каталог товаров</a>
+      <ul class="navigation-list">
+        <li class="navigation-list__item navigation-list__item--text">
+          <a class="navigation-list__link" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="order.html">Вязание на заказ</a>
+        <li class="navigation-list__item">
+          <a class="navigation-list__link" href="order.html">Вязание на заказ</a>
         </li>
-        <li class="navigation__item">
+        <li class="navigation-list__item">
           <a class="navigation__logo logo" href="index.html"></a>
         </li>
-        <li class="navigation__item">
-          <div class="search"></div>
+        <li class="navigation-list__item">
+          <div class="navigation-list__search"></div>
         </li>
-        <li class="navigation__item">
+        <li class="navigation-list__item">
           <div class="cart">Корзина: пока пуста</div>
         </li>
       </ul>
@@ -39,7 +42,7 @@
         <div class="lovely-toys__extended-block extended-block">
           <div class="extended-block__item">Новые поступления</div>
           <div class="extended-block__item">Распродажа</div>
-          <div class="extended-block__item">Бесплатная доставка по России</div>
+          <div class="extended-block__item delivery-block">Бесплатная доставка по России</div>
         </div>
         <h1 class="lovely-toys__title title">Милые штуки ручной работы для дома</h1>
         <div class="lovely-toys__things-list things-list">
@@ -52,25 +55,34 @@
         </div>
       </div>
       <picture class="lovely-toys__image-wrapper">
-        <img class="lovely-toys__image" src="img/lovely-toys-desktop.jpg" alt="Милые штуки ручной работы для дома">
+        <img class="lovely-toys__image" src="images/lovely-toys-desktop.jpg" alt="Милые штуки ручной работы для дома">
       </picture>
     </section>
     <section class="features">
-      <h2 class="features__title">Вязанные корзинки</h2>
+      <h1 class="features__title title">Вязанные корзинки</h1>
+      <h2 class="features__subtitle">Товар недели</h2>
       <p class="features__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах</p>
-      <div class="features__characteristics characteristics">
-        <div class="characteristics__item">Цвет:</div>
-        <div class="characteristics__item">тиффани/серый</div>
-        <div class="characteristics__item">Диаметр:</div>
-        <div class="characteristics__item">25 см</div>
-        <div class="characteristics__item">Высота:</div>
-        <div class="characteristics__item">15 см</div>
+      <h3></h3>
+      <div class="features__parameters parameters">
+        <div class="parameters__item">Цвет:</div>
+        <div class="parameters__item">тиффани/серый</div>
+        <div class="parameters__item">Диаметр:</div>
+        <div class="parameters__item">25 см</div>
+        <div class="parameters__item">Высота:</div>
+        <div class="parameters__item">15 см</div>
       </div>
       <div class="features__price">Цена: 990 руб.</div>
-      <button class="features__button button">Заказать</button>
+      <div class="features__area-button">
+        <button class="features__button button">Заказать</button>
+      </div>
+      <picture class="features__image-wrapper">
+        <source srcset="images/triple-set-mobile.jpg" media="(max-width: 767px)">
+        <source srcset="images/triple-set-tablet.jpg" media="(max-width: 1149px)">
+        <img src="images/triple-set-desktop.jpg" alt="Вязанные корзинки">
+      </picture>
     </section>
     <section class="about">
-      <h2 class="about__title title">Коротко о нас:</h2>
+      <h1 class="about__title title">Коротко о нас:</h1>
       <ul>
         <li>
           <span>Экологически чистые материалы</span>
@@ -118,13 +130,13 @@
         </div>
         <button class="contacts__button button">Напишите нам</button>
 
-        <picture class="contacts__map">
-          <img src="img/map-desktop.png">
+        <picture class="contacts__image-wrapper">
+          <source srcset="images/map-mobile.jpg" media="(max-width: 767px)">
+          <source srcset="images/map-tablet.jpg" media="(max-width: 1149px)">
+          <img src="images/map-desktop.jpg" alt="">
         </picture>
       </div>
     </section>
-
-
 
   </main>
   <footer class="footer">

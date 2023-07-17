@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
   <title>Милые штуки ручной работы для дома</title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
@@ -55,6 +55,7 @@
         </div>
       </div>
       <picture class="lovely-toys__image-wrapper">
+        <source srcset="images/lovely-toys-mobile.jpg" media="(max-width: 767px)">
         <img class="lovely-toys__image" src="images/lovely-toys-desktop.jpg" alt="Милые штуки ручной работы для дома">
       </picture>
     </section>
@@ -83,23 +84,29 @@
     </section>
     <section class="about">
       <h1 class="about__title title">Коротко о нас:</h1>
-      <ul>
-        <li>
+      <ul class="about-list">
+        <li class="about-list__item">
+          <img src="images/icon-1.svg" width="33" height="38">
           <span>Экологически чистые материалы</span>
         </li>
-        <li>
+        <li class="about-list__item">
+          <img src="images/icon-2.svg" width="35" height="34">
           <span>Связано вручную с любовью и умилением</span>
         </li>
-        <li>
+        <li class="about-list__item">
+          <img src="images/icon-3.svg" width="47" height="27">
           <span>Скандинавский стиль по российской цене</span>
         </li>
-        <li>
+        <li class="about-list__item">
+          <img src="images/icon-4.svg" width="55" height="23">
           <span>Поддержка отечественного производителя</span>
         </li>
-        <li>
+        <li class="about-list__item">
+          <img src="images/icon-5.svg" width="34" height="27">
           <span>Увеличивает лайки на фотографиях</span>
         </li>
-        <li>
+        <li class="about-list__item">
+          <img src="images/icon-6.svg" width="33" height="32">
           <span>Поставляется в подарочной упаковке</span>
         </li>
       </ul>
@@ -117,6 +124,10 @@
         <button class="area-button__arrow arrow arrow--left"></button>
         <button class="area-button__arrow arrow arrow--right"></button>
       </div>
+      <picture class="reviews__image-wrapper">
+        <img class="reviews__image" src="images/review.jpg" width="350" height="457">
+      </picture>
+
     </section>
 
     <section class="contacts">

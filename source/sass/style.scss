@@ -1,5 +1,5 @@
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
@@ -100,7 +100,7 @@
   text-decoration: none;
 }
 
-.navigation-list__item:not(first-child) {
+.navigation-list__item:not(:first-child) {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -108,7 +108,7 @@
   display: block;
   width: 149px;
   height: 72px;
-  background: url("../images/main-logo-desktop.svg") no-repeat center;
+  background: url("../img/main-logo-desktop.svg") no-repeat center;
 }
 
 .logo:hover {
@@ -124,7 +124,7 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: url("../images/search.svg") no-repeat center;
+  background: url("../img/search.svg") no-repeat center;
 }
 
 .cart::before {
@@ -132,7 +132,7 @@
   display: inline-block;
   width: 21px;
   height: 18px;
-  background: url("../images/cart.svg") no-repeat center;
+  background: url("../img/cart.svg") no-repeat center;
 }
 
 /*--------------------------------------*/
@@ -148,7 +148,7 @@
   display: block;
   width: auto;
   height: 34px;
-  background: url("../images/wave.svg") no-repeat center;
+  background: url("../img/wave.svg") no-repeat center;
 }
 
 .lovely-toys-inner{
@@ -239,7 +239,7 @@
   display: inline-block;
   width: 41px;
   height: 62px;
-  background: url("../images/interior.svg") no-repeat center;
+  background: url("../img/interior.svg") no-repeat center;
 }
 
 .things-list__item:nth-child(2) {
@@ -251,7 +251,7 @@
   display: inline-block;
   width: 60px;
   height: 61px;
-  background: url("../images/toy.svg") no-repeat center;
+  background: url("../img/toy.svg") no-repeat center;
 }
 
 
@@ -364,7 +364,7 @@
   .logo {
     width: 113px;
     height: 46px;
-    background: url("../images/main-logo-tablet.svg") no-repeat center;
+    background: url("../img/main-logo-tablet.svg") no-repeat center;
   }
 
 }
@@ -375,7 +375,7 @@
   .logo {
     width: 86px;
     height: 35px;
-    background: url("../images/main-logo-mobile.svg") no-repeat center;
+    background: url("../img/main-logo-mobile.svg") no-repeat center;
   }
 
 }

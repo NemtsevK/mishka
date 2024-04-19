@@ -1,0 +1,186 @@
+@use "../base/variables.scss";
+
+.about-us-item__desicription {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+
+  &--eco {
+    margin-bottom: 24px;
+
+    &::before {
+      content: "";
+      background-image: url("../images/stack/sprite.svg#about_eco");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: bottom;
+      background-size: cover;
+      display: block;
+      width: 33px;
+      height: 38px;
+      margin-bottom: 15px;
+      position: relative;
+      left: 7px;
+    }
+  }
+
+  &--money {
+    margin-bottom: 24px;
+
+    &::before {
+      content: "";
+      background-image: url("../images/stack/sprite.svg#about_money");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: bottom;
+      background-size: contain;
+      display: block;
+      width: 47px;
+      height: 38px;
+      margin-bottom: 21px;
+    }
+  }
+
+  &--like {
+    margin-bottom: 26px;
+
+    &::before {
+      content: "";
+      background-image: url("../images/stack/sprite.svg#about_like");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: bottom;
+      background-size: contain;
+      display: block;
+      width: 34px;
+      height: 38px;
+      margin-bottom: 21px;
+      position: relative;
+      left: 7px;
+    }
+  }
+
+  &--thread {
+    margin-bottom: 24px;
+
+    &::before {
+      content: "";
+      background-image: url("../images/stack/sprite.svg#about_thread");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: bottom;
+      background-size: contain;
+      display: block;
+      margin-bottom: 17px;
+      width: 42px;
+      height: 40px;
+    }
+  }
+
+  &--support {
+    margin-bottom: 24px;
+
+    &::before {
+      content: "";
+      background-image: url("../images/stack/sprite.svg#about_support");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: bottom;
+      background-size: contain;
+      display: block;
+      width: 61px;
+      height: 41px;
+      margin-bottom: 17px;
+      position: relative;
+      right: 9px;
+    }
+  }
+
+  &--gift {
+    &::before {
+      content: "";
+      background-image: url("../images/stack/sprite.svg#about_gift");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: bottom;
+      background-size: contain;
+      display: block;
+      width: 39px;
+      height: 39px;
+      margin-bottom: 21px;
+    }
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    font-size: 20px;
+    line-height: 22px;
+
+    &--eco {
+      &::before {
+        margin-bottom: 18px;
+      }
+    }
+
+    &--money {
+      &::before {
+        margin-bottom: 22px;
+      }
+    }
+
+    &--support {
+      &::before {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--thread {
+      &::before {
+        margin-bottom: 17px;
+        position: relative;
+        top: -3px;
+      }
+    }
+
+    &--like {
+      &::before {
+        top: 1px;
+        margin-bottom: 23px;
+      }
+    }
+
+    &--gift {
+      &::before {
+        margin-bottom: 23px;
+      }
+    }
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    font-size: 20px;
+
+    &--thread {
+      &::before {
+        margin-bottom: 15px;
+      }
+    }
+
+    &--money {
+      &::before {
+        margin-bottom: 24px;
+      }
+    }
+
+    &--like {
+      &::before {
+        margin-bottom: 24px;
+      }
+    }
+
+    &--gift {
+      &::before {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

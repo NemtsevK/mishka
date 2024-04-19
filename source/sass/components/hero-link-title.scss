@@ -1,0 +1,9 @@
+@use "../base/variables.scss";
+
+.hero-link-title__text {
+  flex-basis: 130px;
+
+  @media (min-width: variables.$screen-tablet) {
+    flex-basis: 185px;
+  }
+}

@@ -1,0 +1,44 @@
+@use "../base/variables.scss";
+
+.legend {
+  color: #63d1bb;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  text-wrap: nowrap;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #62d1ba;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    padding: 0 50px;
+    padding-top: 18px;
+    position: absolute;
+    max-width: 200px;
+    left: 0;
+    word-break: break-all;
+    white-space: inherit;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    padding: 18px 20px 0 50px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    padding: 18px 20px 0 111px;
+  }
+}

@@ -1,0 +1,32 @@
+@use "../base/variables.scss";
+
+.mail-link {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transition: 0.2s;
+      color: #62d1ba;
+    }
+
+    &:active {
+      .mail-link__text {
+        transition: 0.1s;
+        text-decoration-color: rgba(98, 209, 186, 0.1);
+      }
+    }
+  }
+}
+
+.mail-link__text {
+  position: relative;
+  word-break: break-all;
+  text-decoration: underline;
+  text-decoration-color: #62d1ba;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+
+  @media (min-width: variables.$screen-desktop) {
+    text-underline-offset: 13px;
+    position: relative;
+    left: 2px;
+  }
+}

@@ -1,0 +1,73 @@
+@use "../base/variables.scss";
+
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 29px;
+}
+
+.social-list__link {
+  display: flex;
+  padding: 3px;
+  position: relative;
+
+  &--youtube {
+    left: -3.5px;
+  }
+
+  &--telegram {
+    left: -3px;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    &--vk {
+      right: 3px;
+    }
+
+    &--youtube {
+      left: -7px;
+    }
+
+    &--telegram {
+      left: -7px;
+    }
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    &--vk {
+      right: 4px;
+      top: -1px;
+    }
+
+    &--youtube {
+      left: -9px;
+      top: -2px;
+    }
+
+    &--telegram {
+      left: -9px;
+      top: -2px;
+    }
+  }
+}
+
+.social-list__logo {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      path {
+        transition: 0.2s;
+        fill: #46c1ae;
+      }
+    }
+
+    &:active {
+      path {
+        transition: 0.1s;
+        fill-opacity: 0.3;
+      }
+    }
+  }
+}

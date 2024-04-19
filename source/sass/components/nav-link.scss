@@ -1,0 +1,20 @@
+@use "../base/variables.scss";
+
+.nav-link__description {
+  @media (min-width: variables.$screen-tablet) {
+    &--search {
+      display: none;
+    }
+
+    &--cart {
+      display: block;
+      max-width: 211px;
+      font-size: 17px;
+      line-height: 24px;
+      text-wrap: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      letter-spacing: 0.1px;
+    }
+  }
+}

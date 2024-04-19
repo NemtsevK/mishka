@@ -1,0 +1,15 @@
+@use "../base/variables.scss";
+
+.catalog-title__link {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transition: 0.2s;
+      opacity: 0.6;
+    }
+
+    &:active {
+      transition: 0.2s;
+      opacity: 0.3;
+    }
+  }
+}

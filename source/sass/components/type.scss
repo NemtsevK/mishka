@@ -1,0 +1,11 @@
+@use "../base/variables.scss";
+
+.type__title {
+  padding-bottom: 30px;
+}
+
+.type__list {
+  @media (min-width: variables.$screen-tablet) {
+    padding-left: 169px;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../base/variables.scss";
+
+.contacts-address {
+  display: flex;
+  color: #444444;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: start;
+
+  @media (min-width: variables.$screen-tablet) {
+    font-size: 17px;
+  }
+}
+
+.contacts-address__title {
+  flex-basis: 76px;
+}
+
+.contacts-address__description {
+  word-break: break-all;
+
+  @media (min-width: variables.$screen-tablet) {
+    flex-basis: 257px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    position: relative;
+    left: 12px;
+  }
+}

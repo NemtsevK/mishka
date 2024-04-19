@@ -1,0 +1,68 @@
+@use "../base/variables.scss";
+
+.add__title {
+  padding-bottom: 22.5px;
+}
+
+.add__input {
+  background-color: inherit;
+  border: 2px solid #000000;
+  padding: 17px;
+  padding-bottom: 14px;
+  width: 100%;
+  resize: none;
+  color: #444444;
+  font-family: variables.$font-ptsans;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:focus-visible {
+      outline: 3px solid #444444;
+      outline-offset: 3px;
+    }
+
+    &:hover,
+    &:active {
+      transition: border-color 0.2s;
+      border-color: #62d1ba;
+      outline: none;
+    }
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    padding-left: 16px;
+    padding-top: 15px;
+  }
+}
+
+.add__input::placeholder {
+  color: #000000;
+  font-family: variables.$font-ptsans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  opacity: 0.3;
+
+  @media (min-width: variables.$screen-tablet) {
+    font-size: 19px;
+  }
+}
+
+.add__input:disabled {
+  opacity: 0.2;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-color: #000000;
+    }
+  }
+}
+
+.add__input:not(:placeholder-shown) {
+  transition: border-color 0.2s;
+  border-color: #62d1ba;
+}

@@ -1,0 +1,164 @@
+@use "../base/variables.scss";
+@use "../base/mixin";
+
+.production__wrapper {
+  padding-bottom: 57px;
+
+  @media (min-width: variables.$screen-tablet) {
+    padding-bottom: 61.5px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    display: flex;
+    padding-bottom: 105px;
+  }
+}
+
+.production__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: variables.$screen-tablet) {
+    border-top: none;
+  }
+
+  &--video {
+    order: 2;
+
+    @media (min-width: variables.$screen-tablet) {
+      order: 1;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover + .production__container--description {
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        &:active + .production__container--description {
+          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    @media (min-width: variables.$screen-tablet) {
+      flex-basis: 682.65px;
+      flex-shrink: 0;
+      flex-grow: 1;
+    }
+  }
+
+  &--description {
+    padding-top: 35px;
+    padding-bottom: 33px;
+    border: 1px solid #ececec;
+
+    @media (min-width: variables.$screen-tablet) {
+      border: 1px solid #ececec;
+      padding-bottom: 46px;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          transition: box-shadow 0.2s;
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        &:active {
+          transition: box-shadow 0.2s;
+          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    @media (min-width: variables.$screen-desktop) {
+      order: 2;
+      padding-left: 79.1px;
+      align-items: flex-start;
+      padding-top: 38px;
+    }
+  }
+}
+
+.production__title {
+  font-size: clamp(17px, 5vw, 20px);
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 13px 25px 34px;
+  gap: 25px;
+  border: 1px solid #ececec;
+
+  &--tablet {
+    display: none;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    margin-right: auto;
+    display: none;
+
+    &--tablet {
+      display: flex;
+      border: none;
+      margin: 0;
+      margin-right: auto;
+      padding-top: 2px;
+      padding-bottom: 21.5px;
+      padding-left: 40px;
+      gap: 33px;
+    }
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    &--tablet {
+      display: block;
+      padding-left: 0;
+      padding-right: 48px;
+      padding-bottom: 28px;
+    }
+
+    &::before {
+      margin-bottom: 23px;
+    }
+  }
+
+  &::before {
+    @include mixin.pseudo("../images/stack/sprite.svg#video_camera", 32px, 22px);
+  }
+}
+
+.production__description {
+  order: 3;
+  color: #444444;
+  font-size: clamp(13px, 4vw, 15px);
+  line-height: clamp(24px, 4vw, 30px);
+  padding-bottom: 41px;
+  padding-left: 34px;
+
+  @media (min-width: variables.$screen-tablet) {
+    white-space: initial;
+    padding-right: 37px;
+    padding-left: 39px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    padding-left: 0;
+    padding-bottom: 52px;
+  }
+}
+
+.production__button {
+  order: 4;
+  padding: 14px 18px;
+
+  @media (min-width: variables.$screen-tablet) {
+    width: 76vw;
+    font-size: 17px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    width: auto;
+    min-width: 230.2px;
+  }
+}

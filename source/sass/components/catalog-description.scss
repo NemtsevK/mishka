@@ -1,0 +1,17 @@
+@use "../base/variables.scss";
+
+.catalog-description__container {
+  &--cart {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22.5px;
+    border-top: 1px solid #ececec;
+    position: relative;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    &--cart {
+      padding-top: 25.5px;
+    }
+  }
+}

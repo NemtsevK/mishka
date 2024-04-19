@@ -1,0 +1,118 @@
+@use "../base/variables.scss";
+
+.phone {
+  @media (min-width: variables.$screen-tablet) {
+    background-color: #f1f1f1;
+  }
+}
+
+.phone__label {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 24px;
+    mask-image: url("../images/stack/sprite.svg#phone");
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 8px;
+    top: 0;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    &::after {
+      right: 26px;
+    }
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    bottom: 3px;
+    left: 6px;
+
+    &::after {
+      right: 12px;
+    }
+  }
+}
+
+.phone__input {
+  border: none;
+  background-color: inherit;
+  border-bottom: 2px solid #000000;
+  padding: 14px 10.5px 14px 0;
+  width: 100%;
+  color: #444444;
+  font-family: variables.$font-ptsans;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover,
+    :active {
+      transition: border-color 0.2s;
+      border-color: #62d1ba;
+    }
+  }
+
+  &:disabled {
+    border-color: #000000;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    flex-grow: 1;
+    padding-left: 18px;
+  }
+}
+
+.phone__input::placeholder {
+  color: #000000;
+  font-family: variables.$font-ptsans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  opacity: 0.3;
+
+  @media (min-width: variables.$screen-tablet) {
+    font-size: 19px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .phone__label:hover,
+  .phone__label:active {
+    &::after {
+      transition: background-color 0.2s;
+      background-color: #62d1ba;
+    }
+  }
+}
+
+.phone__label:has(.phone__input:not(:placeholder-shown)) {
+  transition: border-color 0.2s;
+  border-color: #62d1ba;
+
+  &::after {
+    transition: background-color 0.2s;
+    background-color: #62d1ba;
+  }
+}
+
+.phone__label:has(.phone__input:disabled) {
+  opacity: 0.2;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .phone__label:hover:has(.phone__input:disabled) {
+    &::after {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}

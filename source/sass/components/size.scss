@@ -1,0 +1,66 @@
+@use "../base/variables.scss";
+
+.size {
+  width: clamp(260px, 46.6vw, 350px);
+  margin: 0 auto;
+  padding-bottom: 22px;
+}
+
+.size__list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding-bottom: 0;
+}
+
+.size__item {
+  flex-basis: clamp(82px, 14.6vw, 112px);
+}
+
+.size__description {
+  display: block;
+  color: #444444;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: 16px;
+  background-color: inherit;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transition: 0.2s;
+      border-color: rgba(68, 68, 68, 0.3);
+    }
+
+    &:active {
+      transition: border-color 0.2s;
+      border-color: #62d1ba;
+    }
+  }
+}
+
+.size__input:checked + .size__description {
+  transition: border-color 0.2s;
+  border-color: #63d1bb;
+}
+
+.size__label:has(.size__input:disabled) {
+  opacity: 0.5;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .size__label:hover:has(.size__input:disabled) {
+    .size__description {
+      border-color: rgba(68, 68, 68, 0.1);
+    }
+  }
+
+  .size__input:focus-visible + .size__description {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+  }
+}

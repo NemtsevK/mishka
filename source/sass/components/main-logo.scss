@@ -1,0 +1,26 @@
+@use "../base/variables.scss";
+
+.main-logo {
+  width: fit-content;
+}
+
+.main-logo__image {
+  width: fit-content;
+  margin: 0 auto;
+
+  @media (min-width: variables.$screen-tablet) {
+    display: block;
+    position: relative;
+    left: -2px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

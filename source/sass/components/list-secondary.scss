@@ -1,0 +1,23 @@
+@use "../base/variables.scss";
+
+.list-secondary__header {
+  @media (min-width: variables.$screen-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 335px;
+    gap: 0 18px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    width: 390px;
+  }
+}
+
+.list-secondary__hero {
+  @media (min-width: variables.$screen-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 790px;
+    gap: 10px 41px;
+  }
+}

@@ -1,0 +1,215 @@
+@use "../base/variables.scss";
+
+.week-product {
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-image: url("../images/zigzag_line.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto;
+    position: relative;
+    z-index: 0;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    &::after {
+      background-size: cover;
+      height: 16px;
+      right: -3.5px;
+    }
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    &::after {
+      height: 22px;
+      width: 1050px;
+      margin: 0 auto;
+      bottom: -1.5px;
+      right: -2px;
+    }
+  }
+}
+
+.week-product__wrapper {
+  padding-top: 31px;
+  padding-bottom: 36px;
+  max-width: 1150px;
+
+  @media (min-width: variables.$screen-tablet) {
+    padding-top: 39.5px;
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    padding-top: 0;
+    padding-bottom: 72px;
+  }
+}
+
+.week-product__container {
+  @media (min-width: variables.$screen-tablet) {
+    &--primary {
+      display: grid;
+      grid-template-columns: 38vw 1fr;
+      grid-template-rows: repeat(3, minmax(90px, auto));
+      column-gap: 42px;
+    }
+
+    &--secondary {
+      align-self: end;
+    }
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    position: relative;
+
+    &--primary {
+      padding-left: 175px;
+      grid-template-columns: 292px;
+    }
+
+    &--secondary {
+      align-self: auto;
+    }
+  }
+}
+
+.week-product__picture {
+  @media (min-width: variables.$screen-tablet) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    padding-top: 12px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    position: absolute;
+    right: 0;
+    top: -160px;
+  }
+}
+
+.week-product__table {
+  width: 100%;
+  padding-bottom: 27px;
+  color: #444444;
+  font-size: 15px;
+  line-height: 20px;
+
+  @media (min-width: variables.$screen-tablet) {
+    grid-row: 2 / 3;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    padding-bottom: 94px;
+  }
+}
+
+.week-product__title {
+  display: block;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  padding-bottom: 17.5px;
+
+  &::after {
+    content: "Товар недели";
+    display: block;
+    color: #63d1bb;
+    font-family: variables.$font-ptsans;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding-top: 3px;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+    font-size: 43px;
+    line-height: 50px;
+    padding-bottom: 37.5px;
+
+    &::after {
+      padding-top: 6px;
+      padding-right: 26px;
+      text-align: center;
+      line-height: 17px;
+      flex-basis: 100px;
+    }
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    padding-top: 65px;
+    padding-bottom: 35px;
+    justify-content: flex-start;
+    gap: 50px;
+    font-size: 53px;
+    line-height: 57px;
+    padding-left: 25px;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      order: 1;
+      padding: 0;
+      position: relative;
+      left: 7px;
+      top: 8px;
+    }
+  }
+}
+
+.week-product__description {
+  padding-bottom: 17px;
+  color: #444444;
+  font-size: 15px;
+  line-height: 24px;
+
+  &--price {
+    color: #444444;
+    text-align: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 25.5px 0;
+    padding-bottom: 23.5px;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    line-height: 30px;
+    padding-bottom: 16px;
+    font-size: 17px;
+
+    &--price {
+      padding: 0 0 29px;
+      font-size: 20px;
+      position: relative;
+      right: 2px;
+    }
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    padding-top: 0.5px;
+    padding-bottom: 50px;
+    position: relative;
+    right: 1px;
+
+    &--price {
+      padding-top: 13px;
+      padding-bottom: 29px;
+      font-size: 20px;
+    }
+  }
+}
+
+.week-product__button {
+  width: 100%;
+  background: inherit;
+}

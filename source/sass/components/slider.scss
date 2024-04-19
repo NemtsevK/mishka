@@ -1,0 +1,44 @@
+@use "../base/variables.scss";
+@use "../base/mixin";
+
+.slider__description {
+  padding-bottom: 33px;
+  color: #444444;
+  font-size: 15px;
+  line-height: 30px;
+
+  @media (min-width: variables.$screen-tablet) {
+    font-size: 17px;
+    white-space: break-spaces;
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    padding: 0 30px 44px 175px;
+    position: relative;
+    z-index: 1;
+    font-size: 17px;
+    line-height: 29px;
+  }
+}
+
+.slider__item {
+  display: none;
+  position: relative;
+
+  &--current {
+    display: block;
+  }
+}
+
+.slider__author {
+  @include mixin.reset;
+  padding-bottom: 30px;
+  max-width: 600px;
+
+  @media (min-width: variables.$screen-desktop) {
+    padding-left: 174px;
+    position: relative;
+    z-index: 1;
+  }
+}

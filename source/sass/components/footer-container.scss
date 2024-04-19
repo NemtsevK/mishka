@@ -1,0 +1,10 @@
+@use "../base/variables.scss";
+
+.footer-container {
+  @media (min-width: variables.$screen-tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+  }
+}

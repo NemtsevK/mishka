@@ -1,0 +1,54 @@
+@use "../base/variables.scss";
+
+.transparent-button {
+  padding: 16px;
+  color: #444444;
+  text-align: center;
+  font-family: variables.$font-ptsans;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: 2px solid #444444;
+  word-wrap: break-word;
+
+  &--week-product {
+    padding-top: 16px;
+    padding-bottom: 13px;
+    top: 0.5px;
+    letter-spacing: -0.6px;
+  }
+
+  &--reviews {
+    padding-top: 16px;
+    padding-bottom: 13px;
+  }
+
+  &--contacts {
+    padding-top: 16px;
+    padding-bottom: 13px;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    &--week-product {
+      top: 0.5px;
+      letter-spacing: -0.6px;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transition: 0.2s;
+      background-color: #444444;
+      color: #ffffff;
+    }
+
+    &:active {
+      .transparent-button__description {
+        transition: 0.2s;
+        opacity: 0.3;
+      }
+    }
+  }
+}

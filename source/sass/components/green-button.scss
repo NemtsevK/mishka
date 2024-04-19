@@ -1,0 +1,28 @@
+@use "../base/variables.scss";
+@use "../base/mixin.scss";
+
+.green-button {
+  @include mixin.reset;
+  width: clamp(260px, 45.6vw, 350px);
+  background-color: #63d1bb;
+  padding: 18px;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transition: 0.2s;
+      background-color: #46c1ae;
+    }
+
+    &:active {
+      transition: 0.1s;
+      opacity: 0.8;
+    }
+  }
+}

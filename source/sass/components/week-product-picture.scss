@@ -1,0 +1,9 @@
+@use "../base/variables.scss";
+
+.week-product-picture__image {
+  margin: 0 auto;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  max-width: 520px;
+}

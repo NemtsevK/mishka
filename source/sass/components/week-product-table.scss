@@ -1,0 +1,48 @@
+@use "../base/variables.scss";
+
+.week-product-table__rows {
+  padding: 10px 0;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+
+  &--color {
+    padding-bottom: 12.5px;
+  }
+
+  &--diameter {
+    padding-top: 6px;
+    padding-bottom: 13px;
+  }
+
+  &--height {
+    padding-top: 7px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    &--color {
+      padding-bottom: 10.5px;
+    }
+  }
+}
+
+.week-product-table__description {
+  padding: 0;
+
+  &:first-child {
+    flex-basis: 97px;
+    position: relative;
+    right: 2px;
+  }
+
+  &:last-child {
+    flex-basis: 162px;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    &:last-child {
+      position: relative;
+      right: 1.5px;
+    }
+  }
+}

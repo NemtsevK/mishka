@@ -1,0 +1,126 @@
+@use "../base/variables.scss";
+
+.type-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  @media (min-width: variables.$screen-tablet) {
+    gap: 26px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    display: grid;
+    grid-template-columns: repeat(1, 500px);
+  }
+}
+
+.type-list__label {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+
+  @media (min-width: variables.$screen-tablet) {
+    font-size: 19px;
+    line-height: 18px;
+  }
+}
+
+.type-list__description {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #444444;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  &::after {
+    content: "";
+    width: 18.3px;
+    height: 18.3px;
+    border-radius: 50%;
+    background-color: #62d1ba;
+    flex-shrink: 0;
+    position: absolute;
+    left: 11.5px;
+    top: 11.5px;
+    display: none;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    gap: 28px;
+
+    &::before {
+      width: 50px;
+      height: 50px;
+    }
+
+    &::after {
+      width: 22px;
+      height: 22px;
+      left: 14px;
+      top: 14px;
+    }
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    left: 7px;
+  }
+}
+
+.type-list__text {
+  padding-top: 10px;
+
+  &--interior {
+    padding-top: 5px;
+  }
+
+  @media (min-width: variables.$screen-tablet) {
+    padding-top: 15px;
+  }
+}
+
+.type-list__input:checked + .type-list__description::after {
+  display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .type-list__label:hover {
+    .type-list__description::before {
+      transition: border-color 0.2s;
+      border-color: #62d1ba;
+    }
+  }
+
+  .type-list__label:active {
+    .type-list__description::before {
+      transition: border-color 0.2s;
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .type-list__input:focus-visible + .type-list__description::before {
+    outline: 2px solid #000000;
+    outline-offset: 3px;
+    transition: border-color 0.2s;
+    border-color: #62d1ba;
+  }
+
+  .type-list__label:has(.type-list__input:disabled) {
+    opacity: 0.5;
+  }
+
+  .type-list__label:hover:has(.type-list__input:disabled) {
+    .type-list__description::before {
+      border-color: #444444;
+    }
+  }
+}

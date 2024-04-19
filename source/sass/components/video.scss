@@ -1,0 +1,47 @@
+@use "../base/variables.scss";
+@use "../base/mixin";
+
+.video {
+  width: 100%;
+  position: relative;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover .video__button {
+      transition: width 0.15s;
+      width: 121px;
+      height: 92px;
+    }
+
+    &:active .video__button {
+      width: 81px;
+      height: 62px;
+      opacity: 0.3;
+      transition: all 0.15s;
+    }
+  }
+}
+
+.video__picture {
+  width: 100%;
+
+  @media (min-width: variables.$screen-desktop) {
+    height: 100%;
+  }
+}
+
+.video__image {
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: variables.$screen-desktop) {
+    object-fit: cover;
+  }
+}
+
+.video__button {
+  @include mixin.pseudo("../images/stack/sprite.svg#play_video", 100.6px, 76.8px);
+  @include mixin.absolute-center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

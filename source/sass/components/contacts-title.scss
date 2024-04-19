@@ -1,0 +1,45 @@
+@use "../base/variables.scss";
+
+.contacts-title {
+  @media (min-width: variables.$screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      background-image: url("../images/stack/sprite.svg#flag");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 47px;
+      height: 81px;
+      position: relative;
+      bottom: 22px;
+      right: 3px;
+    }
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    position: relative;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background-image: url("../images/stack/sprite.svg#flag");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 47px;
+      height: 81px;
+      position: absolute;
+      bottom: 28px;
+      left: -111.5px;
+    }
+  }
+}

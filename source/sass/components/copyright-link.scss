@@ -1,0 +1,65 @@
+@use "../base/variables.scss";
+
+.copyright-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #000000;
+  width: fit-content;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      path {
+        transition: 0.2s;
+        fill: #46c1ae;
+      }
+    }
+
+    &:active {
+      path {
+        transition: 0.1s;
+        fill-opacity: 0.3;
+      }
+    }
+  }
+}
+
+.copyright-link__description {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 0 10px;
+  position: relative;
+  right: 5px;
+  top: -1px;
+
+  @media (min-width: variables.$screen-tablet) {
+    padding: 0;
+    right: 8px;
+    bottom: 2.5px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    padding: 0;
+    right: 10px;
+    bottom: 3px;
+
+    &--form {
+      right: 12px;
+      top: -3px;
+    }
+  }
+}
+
+.copyright-link__logo {
+  @media (min-width: variables.$screen-tablet) {
+    position: relative;
+    left: 4px;
+    bottom: 2px;
+  }
+
+  @media (min-width: variables.$screen-desktop) {
+    bottom: 3px;
+  }
+}

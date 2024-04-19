@@ -1,0 +1,11 @@
+@use "../base/variables.scss";
+
+.modal-container__modal {
+  position: relative;
+  margin: auto;
+  padding: 33px 30px 45px;
+
+  @media (min-width: variables.$screen-tablet) {
+    padding: 50px 30px;
+  }
+}

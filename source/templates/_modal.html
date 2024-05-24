@@ -1,0 +1,36 @@
+<div class="page__modal modal-container page__modal--closed">
+  <div class="modal-container__modal modal">
+    <p class="modal__title title">Добавить в корзину</p>
+    <p class="modal__description description">Выберите размер:</p>
+    <form class="modal__buttons size">
+      <fieldset class="size__radio fieldset">
+        <legend class="visually-hidden">Выбрать размер</legend>
+        <ul class="size__list list">
+          <li class="size__item">
+            <label class="size__label" for="small" aria-label="Малый">
+              <input class="size__input input visually-hidden" type="radio" id="small" value="small" name="size" checked>
+              <span class="size__description"><span class="size__text">s</span></span>
+            </label>
+          </li>
+          <li class="size__item">
+            <label class="size__label" for="medium" aria-label="Между малым и средним">
+              <input class="size__input input visually-hidden" type="radio" id="medium" value="medium" name="size">
+              <span class="size__description">
+                  <span class="size__text">m</span>
+                </span>
+            </label>
+          </li>
+          <li class="size__item">
+            <label class="size__label" for="large" aria-label="Средний">
+              <input class="size__input input visually-hidden" type="radio" id="large" value="large" name="size">
+              <span class="size__description">
+                  <span class="size__text">l</span>
+                </span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+    <button type="button" class="modal__button green-button">Добавить</button>
+  </div>
+</div>

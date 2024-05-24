@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .footer {
   background-color: #f1f1f1;
@@ -8,15 +8,38 @@
   padding-bottom: 38px;
   max-width: 1150px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-top: 51px;
     padding-bottom: 58px;
   }
 }
 
-.footer__link {
-  @media (max-width: 767px) {
-    display: none;
+.footer__logo {
+  display: none;
+
+  &:hover::before {
+    transition: 0.2s;
+    background-color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 102px;
+    height: 34px;
+    mask-image: url("../images/sprite.svg#logo");
+    background-color: #000000;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $screen-tablet) {
+    display: block;
   }
 }
 
@@ -26,7 +49,7 @@
   position: relative;
   top: -2px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     border-bottom: none;
     padding: 0;
   }
@@ -36,23 +59,7 @@
   padding-top: 20px;
   margin: 0 auto;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding: 0;
-  }
-}
-
-.footer__logo {
-  &:hover {
-    path {
-      transition: 0.2s;
-      fill: #46c1ae;
-    }
-  }
-
-  &:active {
-    path {
-      transition: 0.1s;
-      fill-opacity: 0.3;
-    }
   }
 }

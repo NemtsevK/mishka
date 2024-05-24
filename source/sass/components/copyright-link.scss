@@ -23,6 +23,25 @@
       }
     }
   }
+
+  &::after {
+    content: "";
+    width: 36px;
+    height: 36px;
+    mask-image: url("../images/sprite.svg#html-academy");
+    background-color: #63d1bb;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    background-color: #46c1ae;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 .copyright-link__description {

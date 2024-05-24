@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Мишка. Страница не найдена</title>
+  {% include 'templates/_head.html' %}
+</head>
+<body class="page__body">
+<div class="page__container">
+  {% include 'templates/_header.html' %}
+  <main class="main main--simple">
+    <h1 class="visually-hidden">Мишка</h1>
+    <section class="not-found">
+      <img class="not-found__image" src="images/icons/404.svg" alt="">
+      <h2 class="not-found__title title-h2">Страница не найдена</h2>
+    </section>
+  </main>
+  {% include 'templates/_footer.html' %}
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

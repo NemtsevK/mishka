@@ -124,7 +124,7 @@
   }
 
   &::before {
-    @include mixin.pseudo("../images/stack/sprite.svg#video_camera", 32px, 22px);
+    @include mixin.pseudo("../images/sprite.svg#video_camera", 32px, 22px);
   }
 }
 

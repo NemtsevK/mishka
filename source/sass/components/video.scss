@@ -39,7 +39,7 @@
 }
 
 .video__button {
-  @include mixin.pseudo("../images/stack/sprite.svg#play_video", 100.6px, 76.8px);
+  @include mixin.pseudo("../images/sprite.svg#play_video", 100.6px, 76.8px);
   @include mixin.absolute-center;
   border: none;
   background-color: transparent;

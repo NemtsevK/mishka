@@ -33,7 +33,7 @@
   &--interior {
     &::after {
       content: "";
-      background-image: url("../images/stack/sprite.svg#interior");
+      background-image: url("../images/sprite.svg#interior");
       width: 80px;
       height: 63px;
       background-repeat: no-repeat;
@@ -48,7 +48,7 @@
   &--toys {
     &::after {
       content: "";
-      background-image: url("../images/stack/sprite.svg#toys");
+      background-image: url("../images/sprite.svg#toys");
       width: 80px;
       height: 63px;
       background-repeat: no-repeat;

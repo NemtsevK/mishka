@@ -1,15 +1,15 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .contacts__wrapper {
   padding-top: 42px;
   padding-bottom: 62px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-top: 68px;
     padding-bottom: 49px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     margin: 0;
     padding: 71px 61px 105px 174px;
   }
@@ -22,11 +22,11 @@
     margin: 0 auto;
     padding-bottom: 39px;
 
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       padding-bottom: 57px;
     }
 
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       display: flex;
       justify-content: center;
       padding-bottom: 0;
@@ -34,12 +34,12 @@
   }
 
   &--address {
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       display: block;
       width: 290px;
       padding-bottom: 136px;
@@ -51,13 +51,13 @@
   padding-bottom: 31px;
   letter-spacing: -0.5px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     font-size: 43px;
     line-height: 50px;
     padding-bottom: 18px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     font-size: 53px;
     line-height: 57px;
     padding-bottom: 34.5px;
@@ -68,11 +68,11 @@
 .contacts__mail {
   padding-bottom: 30px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-bottom: 0;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-bottom: 30px;
   }
 }
@@ -80,7 +80,7 @@
 .contacts__button {
   margin: 0 9.38vw;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-left: 39.5px;
     padding-right: 39.5px;
     margin: 0 auto;
@@ -91,7 +91,7 @@
     word-break: break-all;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     position: absolute;
     left: 225px;
     bottom: 105px;
@@ -102,11 +102,11 @@
 .contacts__location {
   padding-bottom: 39px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-bottom: 55px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     margin: 0;
     padding-top: 71px;
     padding-bottom: 105px;

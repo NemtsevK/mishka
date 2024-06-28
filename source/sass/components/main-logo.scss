@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .main-logo {
   width: fit-content;
@@ -8,7 +8,7 @@
   width: fit-content;
   margin: 0 auto;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: block;
     position: relative;
     left: -2px;

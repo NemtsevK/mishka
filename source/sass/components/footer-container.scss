@@ -1,7 +1,7 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .footer-container {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     align-items: center;
     justify-content: center;

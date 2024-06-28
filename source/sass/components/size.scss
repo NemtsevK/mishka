@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .size {
   width: clamp(260px, 46.6vw, 350px);
@@ -28,12 +28,12 @@
   text-transform: uppercase;
   padding: 16px;
   background-color: inherit;
-  border: 2px solid rgba(68, 68, 68, 0.1);
+  border: 2px solid rgba(68, 68, 68, 10%);
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       transition: 0.2s;
-      border-color: rgba(68, 68, 68, 0.3);
+      border-color: rgba(68, 68, 68, 30%);
     }
 
     &:active {
@@ -55,7 +55,7 @@
 @media (hover: hover) and (pointer: fine) {
   .size__label:hover:has(.size__input:disabled) {
     .size__description {
-      border-color: rgba(68, 68, 68, 0.1);
+      border-color: rgba(68, 68, 68, 10%);
     }
   }
 

@@ -1,7 +1,7 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .contacts-title {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     justify-content: space-between;
     letter-spacing: 0;
@@ -21,7 +21,7 @@
     }
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     position: relative;
 
     &::after {

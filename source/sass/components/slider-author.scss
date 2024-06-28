@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .slider-author {
   font-size: 17px;
@@ -6,11 +6,11 @@
   line-height: 24px;
   display: block;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     font-size: 18px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     font-size: 17px;
   }
 }

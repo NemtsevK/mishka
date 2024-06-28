@@ -1,14 +1,14 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .about-us__wrapper {
   padding-top: 32.3px;
   max-width: 1150px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-top: 57.5px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-top: 70px;
   }
 }
@@ -16,12 +16,12 @@
 .about-us__list {
   padding: 28px 0 62px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-top: 41.5px;
     padding-bottom: 57px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding: 40px 247px 65px 175px;
   }
 }
@@ -31,12 +31,12 @@
   font-weight: 700;
   line-height: 30px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     font-size: 43px;
     line-height: 50px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-left: 175px;
     font-size: 53px;
     line-height: 57px;
@@ -44,7 +44,7 @@
 }
 
 .about-us__item {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     &--money {
       grid-column: 1 / 2;
       grid-row: 2 / 3;

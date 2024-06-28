@@ -1,12 +1,13 @@
-@use "../base/variables.scss";
-@use "../base/mixin.scss";
+@use "../base/variables.scss" as *;
+@use "../base/mixin.scss" as *;
 
 .slider-buttons {
   display: flex;
 }
 
 .slider-buttons__button {
-  @include mixin.reset;
+  @include reset;
+
   background-color: transparent;
   flex-basis: 50%;
   border: 1px solid #ececec;
@@ -23,7 +24,7 @@
     transform: rotate(180deg);
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     border: none;
   }
 

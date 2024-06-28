@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .copyright-link {
   display: flex;
@@ -53,13 +53,13 @@
   right: 5px;
   top: -1px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding: 0;
     right: 8px;
     bottom: 2.5px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding: 0;
     right: 10px;
     bottom: 3px;
@@ -72,13 +72,13 @@
 }
 
 .copyright-link__logo {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     position: relative;
     left: 4px;
     bottom: 2px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     bottom: 3px;
   }
 }

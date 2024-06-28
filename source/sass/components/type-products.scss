@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .type-products__link {
   padding: 24px 30px 31px;
@@ -38,7 +38,7 @@
     }
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     flex-basis: 50%;
     padding: 25px 36px 34px;
     font-size: 20px;

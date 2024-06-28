@@ -1,11 +1,11 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .week-title__text {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     max-width: 540px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     order: 2;
   }
 }

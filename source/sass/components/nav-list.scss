@@ -1,7 +1,7 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .nav-list__primary {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     align-self: flex-end;
     order: 1;
@@ -9,19 +9,19 @@
     max-width: 535px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     max-width: 440px;
   }
 }
 
 .nav-list__secondary {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     order: 2;
     width: 43.62vw;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     position: absolute;
     flex-direction: column;
     gap: 0 41px;

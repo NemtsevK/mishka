@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .week-product {
   &::after {
@@ -14,14 +14,14 @@
     z-index: 0;
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     &::after {
       background-size: cover;
       height: 16px;
     }
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     &::after {
       height: 22px;
       width: 1050px;
@@ -37,19 +37,19 @@
   padding-bottom: 36px;
   max-width: 1150px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-top: 39.5px;
     padding-bottom: 52px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-top: 0;
     padding-bottom: 72px;
   }
 }
 
 .week-product__container {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     &--primary {
       display: grid;
       grid-template-columns: 38vw 1fr;
@@ -62,7 +62,7 @@
     }
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     position: relative;
 
     &--primary {
@@ -77,13 +77,13 @@
 }
 
 .week-product__picture {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     grid-column: 2 / 3;
     grid-row: 1 / 4;
     padding-top: 12px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     position: absolute;
     right: 0;
     top: -160px;
@@ -97,12 +97,12 @@
   font-size: 15px;
   line-height: 20px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     grid-row: 2 / 3;
     padding-bottom: 10px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-bottom: 94px;
   }
 }
@@ -118,7 +118,7 @@
     content: "Товар недели";
     display: block;
     color: #63d1bb;
-    font-family: variables.$font-ptsans;
+    font-family: $font-ptsans;
     font-size: 17px;
     font-style: normal;
     font-weight: 700;
@@ -127,7 +127,7 @@
     padding-top: 3px;
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     justify-content: space-between;
     font-size: 43px;
@@ -143,7 +143,7 @@
     }
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-top: 65px;
     padding-bottom: 35px;
     justify-content: flex-start;
@@ -181,7 +181,7 @@
     padding-bottom: 23.5px;
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     line-height: 30px;
     padding-bottom: 16px;
     font-size: 17px;
@@ -194,7 +194,7 @@
     }
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-top: 0.5px;
     padding-bottom: 50px;
     position: relative;

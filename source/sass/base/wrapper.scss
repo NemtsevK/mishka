@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .wrapper {
   padding: 0 30px;
@@ -6,7 +6,7 @@
   text-align: start;
   max-width: 1150px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding: 0 50px;
   }
 }

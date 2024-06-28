@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .add__title {
   padding-bottom: 22.5px;
@@ -7,12 +7,11 @@
 .add__input {
   background-color: inherit;
   border: 2px solid #000000;
-  padding: 17px;
-  padding-bottom: 14px;
+  padding: 17px 17px 14px;
   width: 100%;
   resize: none;
   color: #444444;
-  font-family: variables.$font-ptsans;
+  font-family: $font-ptsans;
   font-size: 19px;
   font-style: normal;
   font-weight: 400;
@@ -32,7 +31,7 @@
     }
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-left: 16px;
     padding-top: 15px;
   }
@@ -40,14 +39,14 @@
 
 .add__input::placeholder {
   color: #000000;
-  font-family: variables.$font-ptsans;
+  font-family: $font-ptsans;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
   opacity: 0.3;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     font-size: 19px;
   }
 }

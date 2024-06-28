@@ -1,7 +1,7 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .hero {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-bottom: 12px;
 
     &--catalog {
@@ -22,7 +22,7 @@
     z-index: 0;
     background-repeat: no-repeat;
 
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       background-position-y: 0;
 
       &::after {
@@ -41,7 +41,7 @@
       }
     }
 
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       margin-bottom: 54px;
 
       &::after {
@@ -85,7 +85,7 @@
     position: relative;
     z-index: 0;
 
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       margin-bottom: 65px;
       min-height: 238px;
 
@@ -104,7 +104,7 @@
       }
     }
 
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       min-height: 272px;
       margin-bottom: 98px;
 
@@ -117,17 +117,17 @@
   }
 
   &--catalog {
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       margin-bottom: 110px;
     }
   }
 
   &--form {
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       margin-bottom: 54px;
     }
 
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       margin-bottom: 98px;
     }
   }
@@ -142,7 +142,7 @@
   left: 0;
   right: 0;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     padding: 0 50px;
   }
@@ -156,12 +156,12 @@
   width: clamp(260px, 87vw, 668px);
   margin: 0 auto;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-top: 154px;
     letter-spacing: 0.5px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     width: 700px;
     padding-top: 156px;
     letter-spacing: 0;
@@ -170,7 +170,7 @@
   &--form {
     padding: 73.5px 0;
 
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       position: relative;
       padding-top: 101px;
       padding-bottom: 63px;
@@ -186,14 +186,14 @@
   padding-top: 17px;
   padding-bottom: 23px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     font-size: 17px;
     line-height: 30px;
     padding-top: 0;
     padding-bottom: 46px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-left: 226px;
     padding-right: 217px;
     white-space: initial;

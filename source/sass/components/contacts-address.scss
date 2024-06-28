@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .contacts-address {
   display: flex;
@@ -7,7 +7,7 @@
   line-height: 30px;
   text-align: start;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     font-size: 17px;
   }
 }
@@ -19,11 +19,11 @@
 .contacts-address__description {
   word-break: break-all;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     flex-basis: 257px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     position: relative;
     left: 12px;
   }

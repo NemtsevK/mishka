@@ -1,14 +1,14 @@
-@use "../base/variables.scss";
-@use "../base/mixin";
+@use "../base/variables.scss" as *;
+@use "../base/mixin" as *;
 
 .production__wrapper {
   padding-bottom: 57px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-bottom: 61.5px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     display: flex;
     padding-bottom: 105px;
   }
@@ -19,31 +19,29 @@
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     border-top: none;
   }
 
   &--video {
     order: 2;
 
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       order: 1;
 
       @media (hover: hover) and (pointer: fine) {
         &:hover + .production__container--description {
-          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 10%);
         }
 
         &:active + .production__container--description {
-          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 10%);
         }
       }
     }
 
-    @media (min-width: variables.$screen-tablet) {
-      flex-basis: 682.65px;
-      flex-shrink: 0;
-      flex-grow: 1;
+    @media (min-width: $screen-tablet) {
+      flex: 1 0 682.65px;
     }
   }
 
@@ -52,26 +50,26 @@
     padding-bottom: 33px;
     border: 1px solid #ececec;
 
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       border: 1px solid #ececec;
       padding-bottom: 46px;
 
       @media (hover: hover) and (pointer: fine) {
         &:hover {
           transition: box-shadow 0.2s;
-          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 10%);
         }
 
         &:active {
           transition: box-shadow 0.2s;
-          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 10%);
         }
       }
     }
 
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       order: 2;
-      padding-left: 79.1px;
+      padding-left: 79px;
       align-items: flex-start;
       padding-top: 38px;
     }
@@ -94,7 +92,7 @@
     display: none;
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     margin-right: auto;
     display: none;
 
@@ -110,7 +108,7 @@
     }
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     &--tablet {
       display: block;
       padding-left: 0;
@@ -124,7 +122,7 @@
   }
 
   &::before {
-    @include mixin.pseudo("../images/sprite.svg#video_camera", 32px, 22px);
+    @include pseudo("../images/sprite.svg#video_camera", 32px, 22px);
   }
 }
 
@@ -136,13 +134,13 @@
   padding-bottom: 41px;
   padding-left: 34px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     white-space: initial;
     padding-right: 37px;
     padding-left: 39px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-left: 0;
     padding-bottom: 52px;
   }
@@ -152,12 +150,12 @@
   order: 4;
   padding: 14px 18px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     width: 76vw;
     font-size: 17px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     width: auto;
     min-width: 230.2px;
   }

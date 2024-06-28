@@ -1,28 +1,27 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .catalog__wrapper {
   padding-bottom: 30px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-bottom: 53px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-bottom: 58px;
   }
 }
 
 .catalog__list {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     flex-direction: column;
     gap: 54px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     gap: 51px;
   }
 }
@@ -30,11 +29,11 @@
 .catalog__item {
   padding-top: 29px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-top: 0;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     flex-basis: 316px;
     position: relative;
   }

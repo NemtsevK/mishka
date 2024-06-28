@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .catalog-description__container {
   &--cart {
@@ -9,7 +9,7 @@
     position: relative;
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     &--cart {
       padding-top: 25.5px;
     }

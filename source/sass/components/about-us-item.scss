@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .about-us-item__desicription {
   display: block;
@@ -112,7 +112,7 @@
     }
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     font-size: 20px;
     line-height: 22px;
 
@@ -156,7 +156,7 @@
     }
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     font-size: 20px;
 
     &--thread {

@@ -1,20 +1,20 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .list-secondary__header {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     flex-wrap: wrap;
     width: 335px;
     gap: 0 18px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     width: 390px;
   }
 }
 
 .list-secondary__hero {
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     display: flex;
     flex-wrap: wrap;
     width: 790px;

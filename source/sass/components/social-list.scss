@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .social-list {
   display: flex;
@@ -27,7 +27,7 @@
     content: "";
     width: 24px;
     height: 24px;
-    background-color: #231F20;
+    background-color: #231f20;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -45,8 +45,7 @@
     mask-image: url("../images/sprite.svg#youtube");
   }
 
-  &--github::before{
+  &--github::before {
     mask-image: url("../images/sprite.svg#github");
   }
-
 }

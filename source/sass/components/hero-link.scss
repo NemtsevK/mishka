@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .hero-link {
   display: flex;
@@ -60,7 +60,7 @@
     }
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     &--interior {
       &::after {
         right: -19px;

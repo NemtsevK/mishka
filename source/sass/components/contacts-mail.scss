@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .contacts-mail {
   display: flex;
@@ -7,7 +7,7 @@
   line-height: 30px;
   text-align: start;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     font-size: 17px;
   }
 }
@@ -21,7 +21,7 @@
   display: block;
   position: relative;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     max-width: 230px;
     height: fit-content;
   }

@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .legend {
   color: #63d1bb;
@@ -20,7 +20,7 @@
     background-color: #62d1ba;
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding: 0 50px;
     padding-top: 18px;
     position: absolute;
@@ -34,11 +34,11 @@
     }
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding: 18px 20px 0 50px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding: 18px 20px 0 111px;
   }
 }

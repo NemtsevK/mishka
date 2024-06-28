@@ -1,5 +1,5 @@
-@use "../base/variables.scss";
-@use "../base/mixin";
+@use "../base/variables.scss" as *;
+@use "../base/mixin" as *;
 
 .nav {
   min-height: 56px;
@@ -10,7 +10,7 @@
   z-index: 2;
   border-bottom: 1px solid #ececec;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     font-size: 14px;
     line-height: 21px;
   }
@@ -21,7 +21,7 @@
   margin: 0 auto;
   position: relative;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding: 0 50px;
   }
 }
@@ -29,14 +29,14 @@
 .nav__container {
   padding: 22px 30px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     position: relative;
     z-index: 1;
     display: inline-block;
     padding: 22px 0 20px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     display: block;
     margin: 0 auto;
     padding: 9px 0 7px;
@@ -49,7 +49,7 @@
   width: fit-content;
   margin: 0 auto;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     margin: 0;
   }
 
@@ -104,7 +104,7 @@
     display: none;
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: none;
   }
 }
@@ -124,12 +124,11 @@
     position: static;
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     position: absolute;
     top: 0;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     align-items: flex-start;
     background-color: inherit;
     color: #000000;
@@ -138,12 +137,11 @@
     transform: translate(-50%, 0%);
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     position: absolute;
     top: 0;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     align-items: flex-start;
     background-color: inherit;
     color: #000000;
@@ -152,7 +150,7 @@
     transform: translate(-50%, 0%);
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     width: 1050px;
   }
 }
@@ -163,7 +161,6 @@
 
 .nav__link {
   width: 100%;
-
   position: relative;
   padding: 26.5px 30px 28.5px 76px;
   border-top: 1px solid #ececec;
@@ -223,7 +220,7 @@
     border-bottom: 1px solid #ececec;
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     border-top: none;
     padding: 0;
     width: fit-content;
@@ -241,7 +238,7 @@
       flex-shrink: 0;
 
       &::before {
-        @include mixin.absolute-center;
+        @include absolute-center;
       }
     }
 
@@ -275,7 +272,7 @@
     }
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     &--catalog {
       font-size: 17px;
       line-height: 24px;
@@ -338,7 +335,7 @@
 .nav__free-delivery {
   display: none;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     color: #444444;
     text-align: end;
     font-size: 15px;
@@ -353,7 +350,7 @@
     max-width: 265px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     width: fit-content;
     right: 1.5px;
     padding-top: 22px;

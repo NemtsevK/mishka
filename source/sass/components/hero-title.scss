@@ -1,7 +1,7 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .hero-title__br {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: none;
   }
 }

@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .page {
   height: 100%;
@@ -6,14 +6,13 @@
 
 .page__body {
   height: 100%;
-  font-family: variables.$font-ptsans;
+  font-family: $font-ptsans;
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 24px;
   color: #000000;
   margin: 0;
-  text-wrap: balance;
   min-height: 100%;
 }
 
@@ -33,7 +32,7 @@
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 90%);
   z-index: 2;
 
   &--closed {

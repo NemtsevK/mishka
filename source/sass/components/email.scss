@@ -1,7 +1,7 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .email {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     background-color: #f1f1f1;
   }
 }
@@ -18,19 +18,19 @@
     mask-position: center;
     mask-size: cover;
     mask-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 20%);
     position: absolute;
     right: 4px;
     top: 4px;
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     &::after {
       right: 23px;
     }
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     bottom: 3px;
     left: 6px;
 
@@ -41,7 +41,7 @@
 }
 
 .email__title {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     top: 2px;
   }
 }
@@ -53,7 +53,7 @@
   padding: 15px 10.5px 14.5px 0;
   width: 100%;
   color: #444444;
-  font-family: variables.$font-ptsans;
+  font-family: $font-ptsans;
   font-size: 19px;
   font-style: normal;
   font-weight: 400;
@@ -71,7 +71,7 @@
     border-color: #000000;
   }
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     flex-grow: 1;
     padding-left: 18px;
   }
@@ -79,14 +79,14 @@
 
 .email__input::placeholder {
   color: #000000;
-  font-family: variables.$font-ptsans;
+  font-family: $font-ptsans;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
   opacity: 0.3;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     font-size: 19px;
   }
 }
@@ -118,7 +118,7 @@
 @media (hover: hover) and (pointer: fine) {
   .email__label:hover:has(.email__input:disabled) {
     &::after {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 20%);
     }
   }
 }

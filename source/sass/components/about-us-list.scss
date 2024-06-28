@@ -1,19 +1,17 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .about-us-list {
   display: flex;
   flex-direction: column;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: grid;
     grid-template-columns: repeat(2, 310px);
     grid-template-rows: subgrid;
-    column-gap: 3.2vw;
-    row-gap: 25px;
+    gap: 25px 3.2vw;
   }
 
-  @media (min-width: variables.$screen-desktop) {
-
+  @media (min-width: $screen-desktop) {
     column-gap: 3.45vw;
   }
 }

@@ -1,4 +1,4 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .fieldset {
   border: none;
@@ -16,21 +16,19 @@
     flex-direction: column;
     gap: 23px;
 
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       padding-left: 217px;
       display: grid;
       grid-template-columns: repeat(2, 248px);
-      column-gap: 14px;
-      row-gap: 24.4px;
+      gap: 24.4px 14px;
       position: relative;
       top: 1px;
     }
 
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       grid-template-columns: repeat(auto-fit, 248px);
       padding-left: 224px;
-      column-gap: 16px;
-      row-gap: 23px;
+      gap: 23px 16px;
     }
   }
 
@@ -39,43 +37,43 @@
     flex-direction: column;
     gap: 22.2px;
 
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       padding-left: 217px;
       gap: 25px;
     }
 
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       padding-right: 227px;
       padding-left: 227px;
     }
   }
 
   &--phone {
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       padding-left: 217px;
     }
 
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       padding-right: 227px;
     }
   }
 
   &--email {
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       padding-left: 217px;
     }
 
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       padding-right: 227px;
     }
   }
 
   &--add {
-    @media (min-width: variables.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       padding-left: 217px;
     }
 
-    @media (min-width: variables.$screen-desktop) {
+    @media (min-width: $screen-desktop) {
       padding-right: 227px;
       padding-left: 225px;
     }

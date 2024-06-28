@@ -1,5 +1,5 @@
-@use "../base/variables.scss";
-@use "../base/mixin";
+@use "../base/variables.scss" as *;
+@use "../base/mixin" as *;
 
 .slider__description {
   padding-bottom: 33px;
@@ -7,13 +7,13 @@
   font-size: 15px;
   line-height: 30px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     font-size: 17px;
     white-space: break-spaces;
     padding-bottom: 61px;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding: 0 30px 44px 175px;
     position: relative;
     z-index: 1;
@@ -32,11 +32,12 @@
 }
 
 .slider__author {
-  @include mixin.reset;
+  @include reset;
+
   padding-bottom: 30px;
   max-width: 600px;
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-left: 174px;
     position: relative;
     z-index: 1;

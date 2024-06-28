@@ -1,5 +1,5 @@
-@use "../base/variables.scss";
-@use "../base/mixin";
+@use "../base/variables.scss" as *;
+@use "../base/mixin" as *;
 
 .video {
   width: 100%;
@@ -24,7 +24,7 @@
 .video__picture {
   width: 100%;
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     height: 100%;
   }
 }
@@ -33,14 +33,15 @@
   width: 100%;
   height: 100%;
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     object-fit: cover;
   }
 }
 
 .video__button {
-  @include mixin.pseudo("../images/sprite.svg#play_video", 100.6px, 76.8px);
-  @include mixin.absolute-center;
+  @include pseudo("../images/sprite.svg#play_video", 100.6px, 76.8px);
+  @include absolute-center;
+
   border: none;
   background-color: transparent;
   cursor: pointer;

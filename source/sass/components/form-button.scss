@@ -1,7 +1,7 @@
-@use "../base/variables.scss";
+@use "../base/variables.scss" as *;
 
 .form-button {
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -16,7 +16,7 @@
   line-height: 16px;
   padding-bottom: 30px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding-bottom: 0;
     font-size: 17px;
     line-height: 30px;
@@ -24,7 +24,7 @@
     text-align: end;
   }
 
-  @media (min-width: variables.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     position: relative;
     left: 1px;
   }
@@ -36,7 +36,7 @@
   letter-spacing: -0.7px;
   padding-bottom: 13px;
 
-  @media (min-width: variables.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     width: auto;
     flex-basis: 230px;
   }

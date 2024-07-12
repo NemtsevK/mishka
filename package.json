@@ -1,9 +1,9 @@
 {
   "name": "mishka",
-  "author": "Nemtsev Konstantin <nemtsevk@hotmail.com> (https://github.com/nemtsev-k)",
-  "description": "Личный проект «Мишка» от HTML Academy",
-  "homepage": "https://nemtsev-k.github.io/mishka/",
-  "repository": "https://github.com/nemtsev-k/mishka",
+  "author": "Nemtsev Konstantin <nemtsevk@hotmail.com> (https://github.com/NemtsevK)",
+  "description": "Личный проект «Мишка»",
+  "homepage": "https://nemtsevk.github.io/mishka/",
+  "repository": "https://github.com/NemtsevK/mishka",
   "private": true,
   "type": "module",
   "devDependencies": {
@@ -56,7 +56,7 @@
     "source/sass/**/*.scss"
   ],
   "engines": {
-    "node": "^20.14.0",
-    "npm": "^10.7.0"
+    "node": "^20.15.1",
+    "npm": "^10.8.2"
   }
 }
